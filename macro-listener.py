@@ -4,7 +4,7 @@ import subprocess
 import random
 from datetime import datetime
 
-arduino = serial.Serial('COM3', 9600)
+arduino = serial.Serial('COM5', 9600)
 time.sleep(2)
 
 def get_current_branch():
