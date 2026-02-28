@@ -1,10 +1,7 @@
 name: QA Automation Pipeline
 
 on:
-  push:
-    branches:
-      - develop
-      - master
+  push:   
 
 jobs:
   e2e-tests:
@@ -14,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
