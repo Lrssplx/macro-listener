@@ -37,11 +37,13 @@ while True:
     cpu = get_cpu_usage()
     ram = get_ram_usage()
     gpu = get_gpu_usage()
+    branch = get_current_branch()
 
     # Envia dados de monitoramento
     arduino.write(f"CPU:{cpu}\n".encode())
     arduino.write(f"RAM:{ram}\n".encode())
     arduino.write(f"GPU:{gpu}\n".encode())
+    arduino.write(f"BRANCH:{branch}\n".encode())
 
     # Escuta comandos do Arduino
     if arduino.in_waiting:
